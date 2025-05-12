@@ -68,8 +68,8 @@ The toolkit consists of several modular components:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/onion_deanon.git
-cd onion_deanon
+git clone https://github.com/dev-ansh-r/onion_de-anonymization
+cd onion_de-anonymization
 
 # Install required dependencies
 pip install -r requirements.txt
