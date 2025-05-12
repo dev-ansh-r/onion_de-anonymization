@@ -1,0 +1,76 @@
+{
+  "target": "34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion",
+  "timestamp": "2025-05-12T09:51:59.922738",
+  "techniques": {
+    "traffic_correlation": {
+      "error": "Object of type bool_ is not JSON serializable"
+    },
+    "browser_exploit": {
+      "variants": [
+        "minimal",
+        "social_engineering",
+        "comprehensive"
+      ],
+      "exploit_files": [
+        "output\\run_20250512_095159\\browser\\exploit_EXP-20250512095159-L0MMCO6L.html",
+        "output\\run_20250512_095159\\browser\\exploit_EXP-20250512095159-L0MMCO6L.html",
+        "output\\run_20250512_095159\\browser\\exploit_EXP-20250512095159-L0MMCO6L.html"
+      ],
+      "data_file": "output\\run_20250512_095159\\browser\\received_data_EXP-20250512095159-L0MMCO6L.json",
+      "summary_file": "output\\run_20250512_095159\\browser\\exploitation_summary_EXP-20250512095159-L0MMCO6L.json",
+      "identified_ips": [
+        "192.168.86.131"
+      ]
+    },
+    "core": {
+      "target_onion": "34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion",
+      "analysis_time": "2025-05-12T09:52:00.034192",
+      "techniques_applied": [
+        "circuit_fingerprinting",
+        "traffic_correlation",
+        "hosting_detection",
+        "service_exploitation",
+        "historical_data"
+      ],
+      "potential_identifiers": {
+        "ip_addresses": [
+          "192.168.86.131"
+        ],
+        "hosting_environments": [
+          "VirtualBox",
+          "VMware",
+          "Local VM"
+        ],
+        "server_information": {
+          "server_type": "Apache",
+          "php_version": "7.4.3",
+          "operating_system": "Ubuntu 20.04"
+        }
+      },
+      "confidence_scores": {
+        "circuit_fingerprinting": 0.6012790897867532,
+        "traffic_correlation": 0.8886785974187515,
+        "hosting_detection": 0.85
+      },
+      "overall_confidence": 0.7799858957351682,
+      "recommendations": [
+        "Perform additional targeted scans on identified IP ranges",
+        "Monitor identified hosting providers for correlations",
+        "Investigate historical domain relationships"
+      ]
+    }
+  },
+  "identified_ips": [
+    {
+      "ip": "192.168.86.131",
+      "confidence": 0.8,
+      "source": "browser_exploit"
+    },
+    {
+      "ip": "192.168.86.131",
+      "confidence": 0.7799858957351682,
+      "source": "core_techniques"
+    }
+  ],
+  "overall_confidence": 0.7899929478675841
+}

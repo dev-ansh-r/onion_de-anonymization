@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+
+{% block title %}Run Details: {{ summary.id }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                <li class="breadcrumb-item active">Run: {{ summary.id }}</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3><i class="fas fa-search"></i> Analysis Summary</h3>
+            </div>
+            <div class="card-body">
+                <h4>Identified IP Addresses</h4>
+                {% if summary.identified_ips %}
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>IP Address</th>
+                                <th>Confidence</th>
+                                <th>Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for ip_data in summary.identified_ips %}
+                                <tr>
+                                    <td>{{ ip_data.ip }}</td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar 
+                                                {% if ip_data.confidence >= 0.8 %}bg-success
+                                                {% elif ip_data.confidence >= 0.6 %}bg-warning
+                                                {% else %}bg-danger{% endif %}" 
+                                                role="progressbar" 
+                                                style="width: {{ (ip_data.confidence * 100)|int }}%;" 
+                                                aria-valuenow="{{ (ip_data.confidence * 100)|int }}" 
+                                                aria-valuemin="0" 
+                                                aria-valuemax="100">
+                                                {{ "%.2f"|format(ip_data.confidence) }}
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>{{ ip_data.source }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <a href="{{ url_for('visualize_run', run_id=summary.id) }}" class="btn btn-success">
+                        <i class="fas fa-chart-bar"></i> Visualize Results
+                    </a>
+                {% else %}
+                    <div class="alert alert-warning">
+                        No IP addresses identified with sufficient confidence.
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <!-- Reports Section -->
+    {% if summary.reports %}
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4><i class="fas fa-file-alt"></i> Reports</h4>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        {% for report in summary.reports %}
+                            <a href="{{ url_for('view_file', filepath=report.path) }}" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">{{ report.filename }}</h5>
+                                </div>
+                                <p class="mb-1">Target: {{ report.target }}</p>
+                                <small>Techniques: 
+                                    {% for technique in report.techniques %}
+                                        <span class="badge bg-secondary technique-badge">{{ technique }}</span>
+                                    {% endfor %}
+                                </small>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    <!-- Payloads Section -->
+    {% if summary.payloads %}
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4><i class="fas fa-code"></i> Payloads</h4>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        {% for payload in summary.payloads %}
+                            <div class="list-group-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">{{ payload.filename }}</h5>
+                                    <span class="badge bg-info">{{ payload.type }}</span>
+                                </div>
+                                <div class="btn-group mt-2" role="group">
+                                    <a href="{{ url_for('view_file', filepath=payload.path) }}" class="btn btn-outline-primary btn-sm">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                                    {% if payload.type in ['html', 'js'] %}
+                                        <a href="{{ url_for('test_payload', payload_path=payload.path) }}" class="btn btn-outline-danger btn-sm">
+                                            <i class="fas fa-flask"></i> Test
+                                        </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+<div class="row mt-4">
+    <!-- Traffic Analysis Section -->
+    {% if summary.traffic_analyses %}
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4><i class="fas fa-chart-line"></i> Traffic Analyses</h4>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        {% for traffic in summary.traffic_analyses %}
+                            {% if traffic.type == 'visualization' %}
+                                <div class="list-group-item">
+                                    <h5 class="mb-1">{{ traffic.filename }}</h5>
+                                    <a href="{{ url_for('view_file', filepath=traffic.path) }}" class="btn btn-outline-primary btn-sm mt-2">
+                                        <i class="fas fa-eye"></i> View Visualization
+                                    </a>
+                                </div>
+                            {% else %}
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">{{ traffic.filename }}</h5>
+                                    </div>
+                                    {% if traffic.best_match %}
+                                        <p class="mb-1">Best match: {{ traffic.best_match }}</p>
+                                        <p class="mb-1">
+                                            Correlation: 
+                                            <span class="
+                                                {% if traffic.correlation >= 0.8 %}confidence-high
+                                                {% elif traffic.correlation >= 0.6 %}confidence-medium
+                                                {% else %}confidence-low{% endif %}">
+                                                {{ "%.4f"|format(traffic.correlation) }}
+                                            </span>
+                                        </p>
+                                    {% endif %}
+                                    <a href="{{ url_for('view_file', filepath=traffic.path) }}" class="btn btn-outline-primary btn-sm mt-2">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </a>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    <!-- Browser Exploits Section -->
+    {% if summary.browser_exploits %}
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4><i class="fas fa-bug"></i> Browser Exploits</h4>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        {% for exploit in summary.browser_exploits %}
+                            <div class="list-group-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">{{ exploit.filename }}</h5>
+                                </div>
+                                <div class="btn-group mt-2" role="group">
+                                    <a href="{{ url_for('view_file', filepath=exploit.path) }}" class="btn btn-outline-primary btn-sm">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                                    <a href="{{ url_for('test_payload', payload_path=exploit.path) }}" class="btn btn-outline-danger btn-sm">
+                                        <i class="fas fa-flask"></i> Test
+                                    </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %} 

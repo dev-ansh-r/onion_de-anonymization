@@ -1,0 +1,69 @@
+{
+  "circuit_fingerprinting": {
+    "technique": "circuit_fingerprinting",
+    "timestamp": "2025-05-12T09:52:00.029300",
+    "findings": {
+      "circuit_pattern_identified": true,
+      "estimated_geographic_region": "Europe",
+      "confidence_level": 0.6012790897867532
+    }
+  },
+  "traffic_correlation": {
+    "technique": "traffic_correlation",
+    "timestamp": "2025-05-12T09:52:00.030934",
+    "findings": {
+      "correlation_detected": true,
+      "potential_ip_ranges": [
+        "192.168.0.0/16",
+        "10.0.0.0/8"
+      ],
+      "confidence_level": 0.8886785974187515,
+      "known_vm_ip": "192.168.86.131"
+    }
+  },
+  "hosting_detection": {
+    "technique": "hosting_detection",
+    "timestamp": "2025-05-12T09:52:00.030934",
+    "findings": {
+      "hosting_type": "virtualized_environment",
+      "potential_providers": [
+        "VirtualBox",
+        "VMware",
+        "Local VM"
+      ],
+      "confidence_level": 0.85
+    }
+  },
+  "service_exploitation": {
+    "technique": "service_exploitation",
+    "timestamp": "2025-05-12T09:52:00.032589",
+    "findings": {
+      "vulnerabilities_found": 2,
+      "server_info": {
+        "server_type": "Apache",
+        "php_version": "7.4.3",
+        "operating_system": "Ubuntu 20.04"
+      },
+      "potential_identifiers": {
+        "local_username": "linux",
+        "hostname": "vm-ubuntu",
+        "timezone": "UTC+05:30"
+      }
+    }
+  },
+  "historical_data": {
+    "technique": "historical_data",
+    "timestamp": "2025-05-12T09:52:00.032589",
+    "findings": {
+      "service_first_seen": "2023-06-15",
+      "related_clearnet_domains": [
+        "example.com",
+        "test-site.net"
+      ],
+      "registration_details": {
+        "registrar": "NameCheap",
+        "email_pattern": "user***@gmail.com"
+      }
+    }
+  }
+}

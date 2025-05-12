@@ -1,0 +1,154 @@
+[
+  {
+    "timestamp": "2025-05-12T08:57:00.018431",
+    "exploit_id": "EXP-20250512095159-L0MMCO6L",
+    "source_ip": "127.0.0.1",
+    "browser_info": {
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0",
+      "language": "es",
+      "platform": "Linux x86_64",
+      "screenDimensions": "1920x1080",
+      "timezone": "Asia/Tokyo"
+    },
+    "techniques": {
+      "webrtc": {
+        "attempted": true,
+        "successful": false,
+        "real_ip": null
+      },
+      "dns": {
+        "attempted": true,
+        "successful": false
+      },
+      "canvas_fingerprint": {
+        "attempted": true,
+        "hash": "e1c38282b83cd2aab703c26a71daea85"
+      },
+      "timing_analysis": {
+        "attempted": true,
+        "measurements": [
+          315.26431831181964,
+          403.40161764179487,
+          309.5030499003906,
+          300.0863434756493,
+          447.70807906537635
+        ]
+      }
+    },
+    "notes": "This is simulated data for educational purposes"
+  },
+  {
+    "timestamp": "2025-05-12T09:44:00.018431",
+    "exploit_id": "EXP-20250512095159-L0MMCO6L",
+    "source_ip": "192.168.109.38",
+    "browser_info": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0",
+      "language": "es",
+      "platform": "MacIntel",
+      "screenDimensions": "1920x1080",
+      "timezone": "America/New_York"
+    },
+    "techniques": {
+      "webrtc": {
+        "attempted": true,
+        "successful": true,
+        "real_ip": "192.168.86.131"
+      },
+      "dns": {
+        "attempted": true,
+        "successful": false
+      },
+      "canvas_fingerprint": {
+        "attempted": true,
+        "hash": "4dde3a3eaf41ec5c4111ab03a7dfc325"
+      },
+      "timing_analysis": {
+        "attempted": true,
+        "measurements": [
+          398.9152840295546,
+          304.6550177912136,
+          483.3309271342387,
+          107.89269287658611,
+          119.74862887606999
+        ]
+      }
+    },
+    "notes": "This is simulated data for educational purposes"
+  },
+  {
+    "timestamp": "2025-05-12T09:27:00.018431",
+    "exploit_id": "EXP-20250512095159-L0MMCO6L",
+    "source_ip": "127.0.0.1",
+    "browser_info": {
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0",
+      "language": "de",
+      "platform": "Linux x86_64",
+      "screenDimensions": "2560x1440",
+      "timezone": "Asia/Tokyo"
+    },
+    "techniques": {
+      "webrtc": {
+        "attempted": true,
+        "successful": false,
+        "real_ip": null
+      },
+      "dns": {
+        "attempted": true,
+        "successful": false
+      },
+      "canvas_fingerprint": {
+        "attempted": true,
+        "hash": "2a7e6d9dd4a7a266afce68639b025a15"
+      },
+      "timing_analysis": {
+        "attempted": true,
+        "measurements": [
+          272.118787835799,
+          400.53417111154334,
+          283.31867780892924,
+          244.16795181282498,
+          199.0165638523162
+        ]
+      }
+    },
+    "notes": "This is simulated data for educational purposes"
+  },
+  {
+    "timestamp": "2025-05-12T09:25:00.018431",
+    "exploit_id": "EXP-20250512095159-L0MMCO6L",
+    "source_ip": "127.0.0.1",
+    "browser_info": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0",
+      "language": "en-GB",
+      "platform": "Win32",
+      "screenDimensions": "2560x1440",
+      "timezone": "America/New_York"
+    },
+    "techniques": {
+      "webrtc": {
+        "attempted": true,
+        "successful": false,
+        "real_ip": null
+      },
+      "dns": {
+        "attempted": true,
+        "successful": false
+      },
+      "canvas_fingerprint": {
+        "attempted": true,
+        "hash": "2677620d3b19c626af88ea144803c356"
+      },
+      "timing_analysis": {
+        "attempted": true,
+        "measurements": [
+          219.6420317698173,
+          102.3436081011083,
+          362.5798215900694,
+          424.6014724511343,
+          450.3152842454222
+        ]
+      }
+    },
+    "notes": "This is simulated data for educational purposes"
+  }
+]

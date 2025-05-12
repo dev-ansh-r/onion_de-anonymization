@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Upload File{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                <li class="breadcrumb-item active">Upload File</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <h3><i class="fas fa-upload"></i> Upload File for Analysis</h3>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info">
+                    <p>Upload HTML, JavaScript, JSON, or image files for analysis and testing.</p>
+                    <p><strong>Note:</strong> Only upload files that you intend to analyze as part of the educational toolkit.</p>
+                </div>
+                
+                <form method="POST" enctype="multipart/form-data" class="mt-4">
+                    <div class="mb-3">
+                        <label for="file" class="form-label">Select File</label>
+                        <input class="form-control" type="file" id="file" name="file">
+                        <div class="form-text">Allowed file types: .html, .js, .json, .png</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="description" class="form-label">File Description (optional)</label>
+                        <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-upload"></i> Upload File
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4>What happens after upload?</h4>
+            </div>
+            <div class="card-body">
+                <ol>
+                    <li>Your file will be saved in the uploads directory</li>
+                    <li>You can view and analyze the file content</li>
+                    <li>For HTML/JS files, you can test them in the payload tester</li>
+                    <li>For JSON files, you can view them in the structured viewer</li>
+                </ol>
+                
+                <div class="alert alert-warning mt-3">
+                    <strong>Important:</strong> Uploaded files are for analysis only and will not be automatically
+                    used as part of the de-anonymization toolkit without explicit configuration.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,69 @@
+{
+  "target": "34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion",
+  "timestamp": "2025-05-12T10:32:53.424156",
+  "techniques": {
+    "traffic_correlation": {
+      "error": "Object of type bool_ is not JSON serializable"
+    },
+    "browser_exploit": {
+      "variants": [
+        "minimal",
+        "social_engineering",
+        "comprehensive"
+      ],
+      "exploit_files": [
+        "output\\run_20250512_103253\\browser\\exploit_EXP-20250512103253-J6DJL4VR.html",
+        "output\\run_20250512_103253\\browser\\exploit_EXP-20250512103253-J6DJL4VR.html",
+        "output\\run_20250512_103253\\browser\\exploit_EXP-20250512103253-J6DJL4VR.html"
+      ],
+      "data_file": "output\\run_20250512_103253\\browser\\received_data_EXP-20250512103253-J6DJL4VR.json",
+      "summary_file": "output\\run_20250512_103253\\browser\\exploitation_summary_EXP-20250512103253-J6DJL4VR.json",
+      "identified_ips": []
+    },
+    "core": {
+      "target_onion": "34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion",
+      "analysis_time": "2025-05-12T10:32:53.523807",
+      "techniques_applied": [
+        "circuit_fingerprinting",
+        "traffic_correlation",
+        "hosting_detection",
+        "service_exploitation",
+        "historical_data"
+      ],
+      "potential_identifiers": {
+        "ip_addresses": [
+          null
+        ],
+        "hosting_environments": [
+          "VirtualBox",
+          "VMware",
+          "Local VM"
+        ],
+        "server_information": {
+          "server_type": "Apache",
+          "php_version": "7.4.3",
+          "operating_system": "Ubuntu 20.04"
+        }
+      },
+      "confidence_scores": {
+        "circuit_fingerprinting": 0.6201917270271166,
+        "traffic_correlation": 0.7498197661401697,
+        "hosting_detection": 0.85
+      },
+      "overall_confidence": 0.7400038310557621,
+      "recommendations": [
+        "Perform additional targeted scans on identified IP ranges",
+        "Monitor identified hosting providers for correlations",
+        "Investigate historical domain relationships"
+      ]
+    }
+  },
+  "identified_ips": [
+    {
+      "ip": null,
+      "confidence": 0.7400038310557621,
+      "source": "core_techniques"
+    }
+  ],
+  "overall_confidence": 0.7400038310557621
+}

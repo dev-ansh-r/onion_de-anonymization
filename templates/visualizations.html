@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}Visualizations for {{ summary.id }}{% endblock %}
+
+{% block head_extra %}
+<style>
+    .viz-container {
+        background-color: #f8f9fa;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .viz-card {
+        transition: transform 0.3s ease;
+    }
+    
+    .viz-card:hover {
+        transform: translateY(-5px);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ url_for('view_run', run_id=summary.id) }}">Run: {{ summary.id }}</a></li>
+                <li class="breadcrumb-item active">Visualizations</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3><i class="fas fa-chart-pie"></i> Analysis Visualizations</h3>
+            </div>
+            <div class="card-body">
+                {% if summary.ip_visualization %}
+                    <div class="viz-container">
+                        <h4>Identified IP Addresses with Confidence Scores</h4>
+                        <div class="text-center">
+                            <img src="{{ summary.ip_visualization }}" class="img-fluid" alt="IP Address Confidence Visualization">
+                        </div>
+                        
+                        <div class="table-responsive mt-4">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>IP Address</th>
+                                        <th>Confidence</th>
+                                        <th>Source</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for ip_data in summary.identified_ips %}
+                                        <tr>
+                                            <td>{{ ip_data.ip }}</td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div class="progress-bar 
+                                                        {% if ip_data.confidence >= 0.8 %}bg-success
+                                                        {% elif ip_data.confidence >= 0.6 %}bg-warning
+                                                        {% else %}bg-danger{% endif %}" 
+                                                        role="progressbar" 
+                                                        style="width: {{ (ip_data.confidence * 100)|int }}%;" 
+                                                        aria-valuenow="{{ (ip_data.confidence * 100)|int }}" 
+                                                        aria-valuemin="0" 
+                                                        aria-valuemax="100">
+                                                        {{ "%.2f"|format(ip_data.confidence) }}
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>{{ ip_data.source }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                {% endif %}
+                
+                {% if summary.traffic_analyses %}
+                    <div class="viz-container">
+                        <h4>Traffic Analysis Visualizations</h4>
+                        <div class="row">
+                            {% for traffic in summary.traffic_analyses %}
+                                {% if traffic.type == 'visualization' %}
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card viz-card">
+                                            <div class="card-header">
+                                                <h5>{{ traffic.filename }}</h5>
+                                            </div>
+                                            <div class="card-body text-center">
+                                                <a href="{{ url_for('view_file', filepath=traffic.path) }}">
+                                                    <img src="{{ url_for('static', filename='temp/' + traffic.filename) }}" class="img-fluid" alt="{{ traffic.filename }}">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% if not summary.ip_visualization and not summary.traffic_analyses %}
+                    <div class="alert alert-info">
+                        No visualizations available for this analysis run.
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

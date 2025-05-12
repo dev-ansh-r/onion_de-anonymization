@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Onion De-anonymization Analyzer - Home{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h3><i class="fas fa-list"></i> Analysis Runs</h3>
+            </div>
+            <div class="card-body">
+                {% if runs %}
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Run ID</th>
+                                <th>Timestamp</th>
+                                <th>Target</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for run in runs %}
+                                <tr>
+                                    <td>{{ run.id }}</td>
+                                    <td>{{ run.timestamp }}</td>
+                                    <td>{{ run.target }}</td>
+                                    <td>
+                                        <a href="{{ url_for('view_run', run_id=run.id) }}" class="btn btn-primary btn-sm">
+                                            <i class="fas fa-eye"></i> View Details
+                                        </a>
+                                        <a href="{{ url_for('visualize_run', run_id=run.id) }}" class="btn btn-success btn-sm">
+                                            <i class="fas fa-chart-bar"></i> Visualize
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <div class="alert alert-info">
+                        No analysis runs found. You can generate analysis results by running the de-anonymization toolkit.
+                    </div>
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <h5>How to generate analysis results:</h5>
+                            <pre class="bg-dark text-light p-3 rounded">
+# Run the full toolkit analysis
+python run.py --target [onion_address] --technique all
+
+# Run traffic correlation analysis only
+python run.py --technique traffic
+
+# Run browser exploitation analysis only
+python run.py --technique browser
+                            </pre>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

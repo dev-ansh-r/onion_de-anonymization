@@ -1,0 +1,80 @@
+{
+  "target": "y34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion",
+  "timestamp": "2025-05-12T10:15:59.574175",
+  "techniques": {
+    "traffic_correlation": {
+      "target_onion": "y34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion",
+      "analysis_time": "2025-05-12T10:15:59.651754",
+      "pattern_type": "unknown",
+      "ips_analyzed": 3,
+      "potential_matches": [],
+      "best_match": "192.168.1.1",
+      "highest_correlation": 0.0
+    },
+    "browser_exploit": {
+      "variants": [
+        "minimal",
+        "social_engineering",
+        "comprehensive"
+      ],
+      "exploit_files": [
+        "output\\run_20250512_101559\\browser\\exploit_EXP-20250512101600-OJNBXYJF.html",
+        "output\\run_20250512_101559\\browser\\exploit_EXP-20250512101600-OJNBXYJF.html",
+        "output\\run_20250512_101559\\browser\\exploit_EXP-20250512101600-OJNBXYJF.html"
+      ],
+      "data_file": "output\\run_20250512_101559\\browser\\received_data_EXP-20250512101600-OJNBXYJF.json",
+      "summary_file": "output\\run_20250512_101559\\browser\\exploitation_summary_EXP-20250512101600-OJNBXYJF.json",
+      "identified_ips": []
+    },
+    "core": {
+      "target_onion": "y34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion",
+      "analysis_time": "2025-05-12T10:16:00.271162",
+      "techniques_applied": [
+        "circuit_fingerprinting",
+        "traffic_correlation",
+        "hosting_detection",
+        "service_exploitation",
+        "historical_data"
+      ],
+      "potential_identifiers": {
+        "ip_addresses": [
+          null
+        ],
+        "hosting_environments": [
+          "VirtualBox",
+          "VMware",
+          "Local VM"
+        ],
+        "server_information": {
+          "server_type": "Apache",
+          "php_version": "7.4.3",
+          "operating_system": "Ubuntu 20.04"
+        }
+      },
+      "confidence_scores": {
+        "circuit_fingerprinting": 0.6574013888308496,
+        "traffic_correlation": 0.8514337355258401,
+        "hosting_detection": 0.85
+      },
+      "overall_confidence": 0.7862783747855633,
+      "recommendations": [
+        "Perform additional targeted scans on identified IP ranges",
+        "Monitor identified hosting providers for correlations",
+        "Investigate historical domain relationships"
+      ]
+    }
+  },
+  "identified_ips": [
+    {
+      "ip": "192.168.1.1",
+      "confidence": 0.0,
+      "source": "traffic_correlation"
+    },
+    {
+      "ip": null,
+      "confidence": 0.7862783747855633,
+      "source": "core_techniques"
+    }
+  ],
+  "overall_confidence": 0.39313918739278164
+}

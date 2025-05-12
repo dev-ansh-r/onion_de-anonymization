@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Payload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .demo-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Test Payload Demo</h1>
+        <p>This is a demonstration payload for testing the analyzer's payload tester functionality.</p>
+        
+        <button class="demo-button" onclick="runTests()">Run Browser Tests</button>
+        
+        <div id="output">
+            Results will appear here...
+        </div>
+    </div>
+
+    <script>
+        function runTests() {
+            const output = document.getElementById('output');
+            output.innerHTML = '<h3>Test Results:</h3>';
+            
+            // Test 1: Browser information
+            output.innerHTML += '<p><strong>Browser Info:</strong> ' + navigator.userAgent + '</p>';
+            
+            // Test 2: Current date/time
+            output.innerHTML += '<p><strong>Current Time:</strong> ' + new Date().toLocaleString() + '</p>';
+            
+            // Test 3: Screen resolution
+            output.innerHTML += '<p><strong>Screen Resolution:</strong> ' + window.screen.width + 'x' + window.screen.height + '</p>';
+            
+            // Test 4: Timezone
+            output.innerHTML += '<p><strong>Timezone:</strong> ' + Intl.DateTimeFormat().resolvedOptions().timeZone + '</p>';
+            
+            // This would contain the simulated WebRTC leak code in a real exploit
+            output.innerHTML += '<p><strong>WebRTC Test:</strong> Simulation only (no actual WebRTC leak)</p>';
+            
+            console.log("Tests completed successfully");
+        }
+    </script>
+</body>
+</html> 

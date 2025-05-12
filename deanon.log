@@ -1,0 +1,264 @@
+2025-05-12 09:35:01,492 - deanon_toolkit - INFO - Initialized de-anonymization toolkit for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:35:01,492 - deanon_toolkit - INFO - Output directory: output\run_20250512_093501
+2025-05-12 09:35:01,492 - deanon_toolkit - INFO - Starting full de-anonymization analysis
+2025-05-12 09:35:01,494 - deanon_toolkit - INFO - Running traffic correlation analysis
+2025-05-12 09:35:01,494 - traffic_correlation - INFO - Initialized traffic correlator for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:35:01,494 - traffic_correlation - INFO - Generating burst traffic pattern with 100 samples
+2025-05-12 09:35:01,495 - traffic_correlation - INFO - Traffic pattern generated and saved to: output\run_20250512_093501\traffic\pattern_burst_20250512_093501.json
+2025-05-12 09:35:01,497 - traffic_correlation - INFO - Simulating sending traffic pattern to 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:35:01,497 - traffic_correlation - INFO - Pattern would take approximately 105.03 seconds to send
+2025-05-12 09:35:01,497 - traffic_correlation - INFO - In a real implementation, would now monitor traffic for 30 seconds
+2025-05-12 09:35:01,498 - traffic_correlation - INFO - Simulating traffic monitoring
+2025-05-12 09:35:01,505 - traffic_correlation - INFO - Generated 4 simulated traffic captures
+2025-05-12 09:35:01,505 - traffic_correlation - INFO - Analyzing traffic correlation
+2025-05-12 09:35:01,606 - deanon_toolkit - ERROR - Error running traffic correlation: Object of type bool_ is not JSON serializable
+2025-05-12 09:35:01,606 - deanon_toolkit - INFO - Generating browser exploitation payloads
+2025-05-12 09:35:01,606 - browser_exploit - INFO - Initialized browser exploit generator with ID: EXP-20250512093501-7W6NSAX6
+2025-05-12 09:35:01,606 - browser_exploit - INFO - Generating 3 exploit variants for testing
+2025-05-12 09:35:01,617 - browser_exploit - INFO - Generated exploit payload: output\run_20250512_093501\browser\exploit_EXP-20250512093501-7W6NSAX6.html
+2025-05-12 09:35:01,617 - browser_exploit - INFO - Generated exploit metadata: output\run_20250512_093501\browser\metadata_EXP-20250512093501-7W6NSAX6.json
+2025-05-12 09:35:01,626 - browser_exploit - INFO - Generated exploit payload: output\run_20250512_093501\browser\exploit_EXP-20250512093501-7W6NSAX6.html
+2025-05-12 09:35:01,627 - browser_exploit - INFO - Generated exploit metadata: output\run_20250512_093501\browser\metadata_EXP-20250512093501-7W6NSAX6.json
+2025-05-12 09:35:01,635 - browser_exploit - INFO - Generated exploit payload: output\run_20250512_093501\browser\exploit_EXP-20250512093501-7W6NSAX6.html
+2025-05-12 09:35:01,637 - browser_exploit - INFO - Generated exploit metadata: output\run_20250512_093501\browser\metadata_EXP-20250512093501-7W6NSAX6.json
+2025-05-12 09:35:01,637 - browser_exploit - INFO - Simulating exploitation data collection server
+2025-05-12 09:35:01,640 - browser_exploit - INFO - Simulated 8 received data points, saved to output\run_20250512_093501\browser\received_data_EXP-20250512093501-7W6NSAX6.json
+2025-05-12 09:35:01,640 - browser_exploit - INFO - Generated exploitation summary: output\run_20250512_093501\browser\exploitation_summary_EXP-20250512093501-7W6NSAX6.json
+2025-05-12 09:35:01,642 - deanon_toolkit - INFO - Generated 3 browser exploit variants
+2025-05-12 09:35:01,642 - deanon_toolkit - INFO - Running core de-anonymization techniques
+2025-05-12 09:35:01,645 - onion_deanon - INFO - Generated payload: output\run_20250512_093501\payloads\payload_8ULRKPSGWH.html
+2025-05-12 09:35:01,647 - onion_deanon - INFO - Generated tracking file: output\run_20250512_093501\payloads\tracking_8ULRKPSGWH.json
+2025-05-12 09:35:01,647 - onion_deanon - INFO - Initialized de-anonymizer for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:35:01,647 - onion_deanon - INFO - Running technique: circuit_fingerprinting
+2025-05-12 09:35:01,648 - onion_deanon - INFO - Simulating circuit fingerprinting technique
+2025-05-12 09:35:01,648 - onion_deanon - INFO - Running technique: traffic_correlation
+2025-05-12 09:35:01,648 - onion_deanon - INFO - Simulating traffic correlation technique
+2025-05-12 09:35:01,648 - onion_deanon - INFO - Running technique: hosting_detection
+2025-05-12 09:35:01,648 - onion_deanon - INFO - Simulating hosting detection technique
+2025-05-12 09:35:01,648 - onion_deanon - INFO - Running technique: service_exploitation
+2025-05-12 09:35:01,648 - onion_deanon - INFO - Simulating service exploitation technique
+2025-05-12 09:35:01,650 - onion_deanon - INFO - Running technique: historical_data
+2025-05-12 09:35:01,650 - onion_deanon - INFO - Simulating historical data analysis
+2025-05-12 09:35:01,650 - onion_deanon - INFO - All techniques completed. Results saved to: output\run_20250512_093501\reports\deanon_results_20250512_093501.json
+2025-05-12 09:35:01,650 - onion_deanon - INFO - Generating comprehensive de-anonymization report
+2025-05-12 09:35:01,651 - onion_deanon - INFO - Comprehensive report generated: output\run_20250512_093501\reports\deanon_report_20250512_093501.json
+2025-05-12 09:35:01,653 - onion_deanon - INFO - Initialized deployment tools for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:35:01,653 - onion_deanon - INFO - Simulating payload deployment via iframe_injection
+2025-05-12 09:35:01,653 - onion_deanon - INFO - Payload deployment simulated: iframe_injection
+2025-05-12 09:35:01,653 - deanon_toolkit - INFO - Core de-anonymization techniques completed
+2025-05-12 09:35:01,656 - deanon_toolkit - INFO - Comprehensive analysis completed. Report saved to: output\run_20250512_093501\reports\comprehensive_report_20250512_093501.json
+2025-05-12 09:47:47,501 - onion_deanon - INFO - Generating html payload for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:47:47,504 - onion_deanon - INFO - Generated payload: output\payloads\payload_6S1CA8OGGF.html
+2025-05-12 09:47:47,506 - onion_deanon - INFO - Generated tracking file: output\payloads\tracking_6S1CA8OGGF.json
+2025-05-12 09:47:47,506 - onion_deanon - INFO - Initialized de-anonymizer for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:47:47,506 - onion_deanon - INFO - Running technique: circuit_fingerprinting
+2025-05-12 09:47:47,506 - onion_deanon - INFO - Simulating circuit fingerprinting technique
+2025-05-12 09:47:47,508 - onion_deanon - INFO - Running technique: traffic_correlation
+2025-05-12 09:47:47,508 - onion_deanon - INFO - Simulating traffic correlation technique
+2025-05-12 09:47:47,509 - onion_deanon - INFO - Running technique: hosting_detection
+2025-05-12 09:47:47,509 - onion_deanon - INFO - Simulating hosting detection technique
+2025-05-12 09:47:47,509 - onion_deanon - INFO - Running technique: service_exploitation
+2025-05-12 09:47:47,509 - onion_deanon - INFO - Simulating service exploitation technique
+2025-05-12 09:47:47,509 - onion_deanon - INFO - Running technique: historical_data
+2025-05-12 09:47:47,511 - onion_deanon - INFO - Simulating historical data analysis
+2025-05-12 09:47:47,512 - onion_deanon - INFO - All techniques completed. Results saved to: output\results\deanon_results_20250512_094747.json
+2025-05-12 09:47:47,512 - onion_deanon - INFO - De-anonymization process completed
+2025-05-12 09:51:59,922 - deanon_toolkit - INFO - Initialized de-anonymization toolkit for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:51:59,922 - deanon_toolkit - INFO - Output directory: output\run_20250512_095159
+2025-05-12 09:51:59,922 - deanon_toolkit - INFO - Starting full de-anonymization analysis
+2025-05-12 09:51:59,922 - deanon_toolkit - INFO - Running traffic correlation analysis
+2025-05-12 09:51:59,923 - traffic_correlation - INFO - Initialized traffic correlator for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:51:59,923 - traffic_correlation - INFO - Generating burst traffic pattern with 100 samples
+2025-05-12 09:51:59,925 - traffic_correlation - INFO - Traffic pattern generated and saved to: output\run_20250512_095159\traffic\pattern_burst_20250512_095159.json
+2025-05-12 09:51:59,927 - traffic_correlation - INFO - Simulating sending traffic pattern to 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:51:59,927 - traffic_correlation - INFO - Pattern would take approximately 89.37 seconds to send
+2025-05-12 09:51:59,927 - traffic_correlation - INFO - In a real implementation, would now monitor traffic for 30 seconds
+2025-05-12 09:51:59,928 - traffic_correlation - INFO - Simulating traffic monitoring
+2025-05-12 09:51:59,947 - traffic_correlation - INFO - Generated 4 simulated traffic captures
+2025-05-12 09:51:59,947 - traffic_correlation - INFO - Analyzing traffic correlation
+2025-05-12 09:51:59,984 - deanon_toolkit - ERROR - Error running traffic correlation: Object of type bool_ is not JSON serializable
+2025-05-12 09:51:59,984 - deanon_toolkit - INFO - Generating browser exploitation payloads
+2025-05-12 09:51:59,985 - browser_exploit - INFO - Initialized browser exploit generator with ID: EXP-20250512095159-L0MMCO6L
+2025-05-12 09:51:59,985 - browser_exploit - INFO - Generating 3 exploit variants for testing
+2025-05-12 09:51:59,996 - browser_exploit - INFO - Generated exploit payload: output\run_20250512_095159\browser\exploit_EXP-20250512095159-L0MMCO6L.html
+2025-05-12 09:51:59,997 - browser_exploit - INFO - Generated exploit metadata: output\run_20250512_095159\browser\metadata_EXP-20250512095159-L0MMCO6L.json
+2025-05-12 09:52:00,006 - browser_exploit - INFO - Generated exploit payload: output\run_20250512_095159\browser\exploit_EXP-20250512095159-L0MMCO6L.html
+2025-05-12 09:52:00,006 - browser_exploit - INFO - Generated exploit metadata: output\run_20250512_095159\browser\metadata_EXP-20250512095159-L0MMCO6L.json
+2025-05-12 09:52:00,016 - browser_exploit - INFO - Generated exploit payload: output\run_20250512_095159\browser\exploit_EXP-20250512095159-L0MMCO6L.html
+2025-05-12 09:52:00,017 - browser_exploit - INFO - Generated exploit metadata: output\run_20250512_095159\browser\metadata_EXP-20250512095159-L0MMCO6L.json
+2025-05-12 09:52:00,018 - browser_exploit - INFO - Simulating exploitation data collection server
+2025-05-12 09:52:00,019 - browser_exploit - INFO - Simulated 4 received data points, saved to output\run_20250512_095159\browser\received_data_EXP-20250512095159-L0MMCO6L.json
+2025-05-12 09:52:00,020 - browser_exploit - INFO - Generated exploitation summary: output\run_20250512_095159\browser\exploitation_summary_EXP-20250512095159-L0MMCO6L.json
+2025-05-12 09:52:00,022 - deanon_toolkit - INFO - Generated 3 browser exploit variants
+2025-05-12 09:52:00,022 - deanon_toolkit - INFO - Running core de-anonymization techniques
+2025-05-12 09:52:00,025 - onion_deanon - INFO - Generated payload: output\run_20250512_095159\payloads\payload_LQE87UYC53.html
+2025-05-12 09:52:00,027 - onion_deanon - INFO - Generated tracking file: output\run_20250512_095159\payloads\tracking_LQE87UYC53.json
+2025-05-12 09:52:00,027 - onion_deanon - INFO - Initialized de-anonymizer for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:52:00,027 - onion_deanon - INFO - Running technique: circuit_fingerprinting
+2025-05-12 09:52:00,029 - onion_deanon - INFO - Simulating circuit fingerprinting technique
+2025-05-12 09:52:00,029 - onion_deanon - INFO - Running technique: traffic_correlation
+2025-05-12 09:52:00,029 - onion_deanon - INFO - Simulating traffic correlation technique
+2025-05-12 09:52:00,030 - onion_deanon - INFO - Running technique: hosting_detection
+2025-05-12 09:52:00,030 - onion_deanon - INFO - Simulating hosting detection technique
+2025-05-12 09:52:00,030 - onion_deanon - INFO - Running technique: service_exploitation
+2025-05-12 09:52:00,030 - onion_deanon - INFO - Simulating service exploitation technique
+2025-05-12 09:52:00,032 - onion_deanon - INFO - Running technique: historical_data
+2025-05-12 09:52:00,032 - onion_deanon - INFO - Simulating historical data analysis
+2025-05-12 09:52:00,034 - onion_deanon - INFO - All techniques completed. Results saved to: output\run_20250512_095159\reports\deanon_results_20250512_095200.json
+2025-05-12 09:52:00,034 - onion_deanon - INFO - Generating comprehensive de-anonymization report
+2025-05-12 09:52:00,035 - onion_deanon - INFO - Comprehensive report generated: output\run_20250512_095159\reports\deanon_report_20250512_095200.json
+2025-05-12 09:52:00,035 - onion_deanon - INFO - Initialized deployment tools for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:52:00,035 - onion_deanon - INFO - Simulating payload deployment via iframe_injection
+2025-05-12 09:52:00,035 - onion_deanon - INFO - Payload deployment simulated: iframe_injection
+2025-05-12 09:52:00,037 - deanon_toolkit - INFO - Core de-anonymization techniques completed
+2025-05-12 09:52:00,039 - deanon_toolkit - INFO - Comprehensive analysis completed. Report saved to: output\run_20250512_095159\reports\comprehensive_report_20250512_095159.json
+2025-05-12 09:54:20,105 - deanon_toolkit - INFO - Initialized de-anonymization toolkit for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:54:20,105 - deanon_toolkit - INFO - Output directory: output\run_20250512_095420
+2025-05-12 09:54:20,106 - deanon_toolkit - INFO - Starting full de-anonymization analysis
+2025-05-12 09:54:20,106 - deanon_toolkit - INFO - Running traffic correlation analysis
+2025-05-12 09:54:20,106 - traffic_correlation - INFO - Initialized traffic correlator for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:54:20,107 - traffic_correlation - INFO - Generating burst traffic pattern with 100 samples
+2025-05-12 09:54:20,111 - traffic_correlation - INFO - Traffic pattern generated and saved to: output\run_20250512_095420\traffic\pattern_burst_20250512_095420.json
+2025-05-12 09:54:20,111 - traffic_correlation - INFO - Simulating sending traffic pattern to 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:54:20,113 - traffic_correlation - INFO - Pattern would take approximately 114.33 seconds to send
+2025-05-12 09:54:20,113 - traffic_correlation - INFO - In a real implementation, would now monitor traffic for 30 seconds
+2025-05-12 09:54:20,116 - traffic_correlation - INFO - Simulating traffic monitoring
+2025-05-12 09:54:20,124 - traffic_correlation - INFO - Generated 4 simulated traffic captures
+2025-05-12 09:54:20,124 - traffic_correlation - INFO - Analyzing traffic correlation
+2025-05-12 09:54:20,158 - deanon_toolkit - ERROR - Error running traffic correlation: Object of type bool_ is not JSON serializable
+2025-05-12 09:54:20,158 - deanon_toolkit - INFO - Generating browser exploitation payloads
+2025-05-12 09:54:20,159 - browser_exploit - INFO - Initialized browser exploit generator with ID: EXP-20250512095420-AZ4HM9BG
+2025-05-12 09:54:20,159 - browser_exploit - INFO - Generating 3 exploit variants for testing
+2025-05-12 09:54:20,170 - browser_exploit - INFO - Generated exploit payload: output\run_20250512_095420\browser\exploit_EXP-20250512095420-AZ4HM9BG.html
+2025-05-12 09:54:20,171 - browser_exploit - INFO - Generated exploit metadata: output\run_20250512_095420\browser\metadata_EXP-20250512095420-AZ4HM9BG.json
+2025-05-12 09:54:20,179 - browser_exploit - INFO - Generated exploit payload: output\run_20250512_095420\browser\exploit_EXP-20250512095420-AZ4HM9BG.html
+2025-05-12 09:54:20,179 - browser_exploit - INFO - Generated exploit metadata: output\run_20250512_095420\browser\metadata_EXP-20250512095420-AZ4HM9BG.json
+2025-05-12 09:54:20,189 - browser_exploit - INFO - Generated exploit payload: output\run_20250512_095420\browser\exploit_EXP-20250512095420-AZ4HM9BG.html
+2025-05-12 09:54:20,189 - browser_exploit - INFO - Generated exploit metadata: output\run_20250512_095420\browser\metadata_EXP-20250512095420-AZ4HM9BG.json
+2025-05-12 09:54:20,189 - browser_exploit - INFO - Simulating exploitation data collection server
+2025-05-12 09:54:20,192 - browser_exploit - INFO - Simulated 7 received data points, saved to output\run_20250512_095420\browser\received_data_EXP-20250512095420-AZ4HM9BG.json
+2025-05-12 09:54:20,192 - browser_exploit - INFO - Generated exploitation summary: output\run_20250512_095420\browser\exploitation_summary_EXP-20250512095420-AZ4HM9BG.json
+2025-05-12 09:54:20,193 - deanon_toolkit - INFO - Generated 3 browser exploit variants
+2025-05-12 09:54:20,193 - deanon_toolkit - INFO - Running core de-anonymization techniques
+2025-05-12 09:54:20,197 - onion_deanon - INFO - Generated payload: output\run_20250512_095420\payloads\payload_4UZ6G0XZB9.html
+2025-05-12 09:54:20,198 - onion_deanon - INFO - Generated tracking file: output\run_20250512_095420\payloads\tracking_4UZ6G0XZB9.json
+2025-05-12 09:54:20,198 - onion_deanon - INFO - Initialized de-anonymizer for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:54:20,198 - onion_deanon - INFO - Running technique: circuit_fingerprinting
+2025-05-12 09:54:20,198 - onion_deanon - INFO - Simulating circuit fingerprinting technique
+2025-05-12 09:54:20,198 - onion_deanon - INFO - Running technique: traffic_correlation
+2025-05-12 09:54:20,200 - onion_deanon - INFO - Simulating traffic correlation technique
+2025-05-12 09:54:20,200 - onion_deanon - INFO - Running technique: hosting_detection
+2025-05-12 09:54:20,201 - onion_deanon - INFO - Simulating hosting detection technique
+2025-05-12 09:54:20,201 - onion_deanon - INFO - Running technique: service_exploitation
+2025-05-12 09:54:20,201 - onion_deanon - INFO - Simulating service exploitation technique
+2025-05-12 09:54:20,201 - onion_deanon - INFO - Running technique: historical_data
+2025-05-12 09:54:20,201 - onion_deanon - INFO - Simulating historical data analysis
+2025-05-12 09:54:20,203 - onion_deanon - INFO - All techniques completed. Results saved to: output\run_20250512_095420\reports\deanon_results_20250512_095420.json
+2025-05-12 09:54:20,204 - onion_deanon - INFO - Generating comprehensive de-anonymization report
+2025-05-12 09:54:20,206 - onion_deanon - INFO - Comprehensive report generated: output\run_20250512_095420\reports\deanon_report_20250512_095420.json
+2025-05-12 09:54:20,206 - onion_deanon - INFO - Initialized deployment tools for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 09:54:20,206 - onion_deanon - INFO - Simulating payload deployment via iframe_injection
+2025-05-12 09:54:20,206 - onion_deanon - INFO - Payload deployment simulated: iframe_injection
+2025-05-12 09:54:20,208 - deanon_toolkit - INFO - Core de-anonymization techniques completed
+2025-05-12 09:54:20,209 - deanon_toolkit - INFO - Comprehensive analysis completed. Report saved to: output\run_20250512_095420\reports\comprehensive_report_20250512_095420.json
+2025-05-12 10:15:59,572 - deanon_toolkit - INFO - Initialized de-anonymization toolkit for y34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 10:15:59,574 - deanon_toolkit - INFO - Output directory: output\run_20250512_101559
+2025-05-12 10:15:59,574 - deanon_toolkit - INFO - Starting full de-anonymization analysis
+2025-05-12 10:15:59,574 - deanon_toolkit - INFO - Running traffic correlation analysis
+2025-05-12 10:15:59,574 - traffic_correlation - INFO - Initialized traffic correlator for y34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 10:15:59,575 - traffic_correlation - INFO - Generating burst traffic pattern with 100 samples
+2025-05-12 10:15:59,578 - traffic_correlation - INFO - Traffic pattern generated and saved to: output\run_20250512_101559\traffic\pattern_burst_20250512_101559.json
+2025-05-12 10:15:59,578 - traffic_correlation - INFO - Simulating sending traffic pattern to y34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 10:15:59,578 - traffic_correlation - INFO - Pattern would take approximately 115.56 seconds to send
+2025-05-12 10:15:59,578 - traffic_correlation - INFO - In a real implementation, would now monitor traffic for 30 seconds
+2025-05-12 10:15:59,580 - traffic_correlation - INFO - Simulating traffic monitoring for 30 seconds
+2025-05-12 10:15:59,598 - traffic_correlation - INFO - Generated 3 simulated traffic captures
+2025-05-12 10:15:59,598 - traffic_correlation - INFO - Analyzing traffic correlation
+2025-05-12 10:15:59,651 - traffic_correlation - INFO - Traffic correlation analysis complete
+2025-05-12 10:15:59,651 - traffic_correlation - INFO - Best match: 192.168.1.1 with correlation 0.0000
+2025-05-12 10:16:00,223 - traffic_correlation - INFO - Correlation visualization saved to: output\run_20250512_101559\traffic\correlation_plot_20250512_101600.png
+2025-05-12 10:16:00,223 - deanon_toolkit - INFO - Traffic correlation analysis completed
+2025-05-12 10:16:00,224 - deanon_toolkit - INFO - Generating browser exploitation payloads
+2025-05-12 10:16:00,224 - browser_exploit - INFO - Initialized browser exploit generator with ID: EXP-20250512101600-OJNBXYJF
+2025-05-12 10:16:00,224 - browser_exploit - INFO - Generating 3 exploit variants for testing
+2025-05-12 10:16:00,234 - browser_exploit - INFO - Generated exploit payload: output\run_20250512_101559\browser\exploit_EXP-20250512101600-OJNBXYJF.html
+2025-05-12 10:16:00,235 - browser_exploit - INFO - Generated exploit metadata: output\run_20250512_101559\browser\metadata_EXP-20250512101600-OJNBXYJF.json
+2025-05-12 10:16:00,243 - browser_exploit - INFO - Generated exploit payload: output\run_20250512_101559\browser\exploit_EXP-20250512101600-OJNBXYJF.html
+2025-05-12 10:16:00,245 - browser_exploit - INFO - Generated exploit metadata: output\run_20250512_101559\browser\metadata_EXP-20250512101600-OJNBXYJF.json
+2025-05-12 10:16:00,253 - browser_exploit - INFO - Generated exploit payload: output\run_20250512_101559\browser\exploit_EXP-20250512101600-OJNBXYJF.html
+2025-05-12 10:16:00,253 - browser_exploit - INFO - Generated exploit metadata: output\run_20250512_101559\browser\metadata_EXP-20250512101600-OJNBXYJF.json
+2025-05-12 10:16:00,255 - browser_exploit - INFO - Simulating exploitation data collection server
+2025-05-12 10:16:00,256 - browser_exploit - INFO - Simulated 6 received data points, saved to output\run_20250512_101559\browser\received_data_EXP-20250512101600-OJNBXYJF.json
+2025-05-12 10:16:00,258 - browser_exploit - INFO - Generated exploitation summary: output\run_20250512_101559\browser\exploitation_summary_EXP-20250512101600-OJNBXYJF.json
+2025-05-12 10:16:00,258 - deanon_toolkit - INFO - Generated 3 browser exploit variants
+2025-05-12 10:16:00,260 - deanon_toolkit - INFO - Running core de-anonymization techniques
+2025-05-12 10:16:00,263 - onion_deanon - INFO - Generated payload: output\run_20250512_101559\payloads\payload_JURGMKEAFL.html
+2025-05-12 10:16:00,264 - onion_deanon - INFO - Generated tracking file: output\run_20250512_101559\payloads\tracking_JURGMKEAFL.json
+2025-05-12 10:16:00,265 - onion_deanon - INFO - Initialized de-anonymizer for y34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 10:16:00,265 - onion_deanon - INFO - Running technique: circuit_fingerprinting
+2025-05-12 10:16:00,266 - onion_deanon - INFO - Simulating circuit fingerprinting technique
+2025-05-12 10:16:00,266 - onion_deanon - INFO - Running technique: traffic_correlation
+2025-05-12 10:16:00,266 - onion_deanon - INFO - Simulating traffic correlation technique
+2025-05-12 10:16:00,267 - onion_deanon - INFO - Running technique: hosting_detection
+2025-05-12 10:16:00,267 - onion_deanon - INFO - Simulating hosting detection technique
+2025-05-12 10:16:00,267 - onion_deanon - INFO - Running technique: service_exploitation
+2025-05-12 10:16:00,267 - onion_deanon - INFO - Simulating service exploitation technique
+2025-05-12 10:16:00,269 - onion_deanon - INFO - Running technique: historical_data
+2025-05-12 10:16:00,269 - onion_deanon - INFO - Simulating historical data analysis
+2025-05-12 10:16:00,271 - onion_deanon - INFO - All techniques completed. Results saved to: output\run_20250512_101559\reports\deanon_results_20250512_101600.json
+2025-05-12 10:16:00,271 - onion_deanon - INFO - Generating comprehensive de-anonymization report
+2025-05-12 10:16:00,272 - onion_deanon - INFO - Comprehensive report generated: output\run_20250512_101559\reports\deanon_report_20250512_101600.json
+2025-05-12 10:16:00,272 - onion_deanon - INFO - Initialized deployment tools for y34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 10:16:00,273 - onion_deanon - INFO - Simulating payload deployment via iframe_injection
+2025-05-12 10:16:00,274 - onion_deanon - INFO - Payload deployment simulated: iframe_injection
+2025-05-12 10:16:00,274 - deanon_toolkit - INFO - Core de-anonymization techniques completed
+2025-05-12 10:16:00,276 - deanon_toolkit - INFO - Comprehensive analysis completed. Report saved to: output\run_20250512_101559\reports\comprehensive_report_20250512_101559.json
+2025-05-12 10:32:53,424 - deanon_toolkit - INFO - Initialized de-anonymization toolkit for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 10:32:53,424 - deanon_toolkit - INFO - Output directory: output\run_20250512_103253
+2025-05-12 10:32:53,424 - deanon_toolkit - INFO - Starting full de-anonymization analysis
+2025-05-12 10:32:53,424 - deanon_toolkit - INFO - Running traffic correlation analysis
+2025-05-12 10:32:53,425 - traffic_correlation - INFO - Initialized traffic correlator for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 10:32:53,425 - traffic_correlation - INFO - Generating burst traffic pattern with 100 samples
+2025-05-12 10:32:53,428 - traffic_correlation - INFO - Traffic pattern generated and saved to: output\run_20250512_103253\traffic\pattern_burst_20250512_103253.json
+2025-05-12 10:32:53,428 - traffic_correlation - INFO - Simulating sending traffic pattern to 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 10:32:53,428 - traffic_correlation - INFO - Pattern would take approximately 105.64 seconds to send
+2025-05-12 10:32:53,430 - traffic_correlation - INFO - In a real implementation, would now monitor traffic for 30 seconds
+2025-05-12 10:32:53,430 - traffic_correlation - INFO - Simulating traffic monitoring for 30 seconds
+2025-05-12 10:32:53,448 - traffic_correlation - INFO - Generated 3 simulated traffic captures
+2025-05-12 10:32:53,448 - traffic_correlation - INFO - Analyzing traffic correlation
+2025-05-12 10:32:53,477 - deanon_toolkit - ERROR - Error running traffic correlation: Object of type bool_ is not JSON serializable
+2025-05-12 10:32:53,479 - deanon_toolkit - INFO - Generating browser exploitation payloads
+2025-05-12 10:32:53,479 - browser_exploit - INFO - Initialized browser exploit generator with ID: EXP-20250512103253-J6DJL4VR
+2025-05-12 10:32:53,479 - browser_exploit - INFO - Generating 3 exploit variants for testing
+2025-05-12 10:32:53,488 - browser_exploit - INFO - Generated exploit payload: output\run_20250512_103253\browser\exploit_EXP-20250512103253-J6DJL4VR.html
+2025-05-12 10:32:53,490 - browser_exploit - INFO - Generated exploit metadata: output\run_20250512_103253\browser\metadata_EXP-20250512103253-J6DJL4VR.json
+2025-05-12 10:32:53,498 - browser_exploit - INFO - Generated exploit payload: output\run_20250512_103253\browser\exploit_EXP-20250512103253-J6DJL4VR.html
+2025-05-12 10:32:53,498 - browser_exploit - INFO - Generated exploit metadata: output\run_20250512_103253\browser\metadata_EXP-20250512103253-J6DJL4VR.json
+2025-05-12 10:32:53,507 - browser_exploit - INFO - Generated exploit payload: output\run_20250512_103253\browser\exploit_EXP-20250512103253-J6DJL4VR.html
+2025-05-12 10:32:53,507 - browser_exploit - INFO - Generated exploit metadata: output\run_20250512_103253\browser\metadata_EXP-20250512103253-J6DJL4VR.json
+2025-05-12 10:32:53,507 - browser_exploit - INFO - Simulating exploitation data collection server
+2025-05-12 10:32:53,511 - browser_exploit - INFO - Simulated 3 received data points, saved to output\run_20250512_103253\browser\received_data_EXP-20250512103253-J6DJL4VR.json
+2025-05-12 10:32:53,512 - browser_exploit - INFO - Generated exploitation summary: output\run_20250512_103253\browser\exploitation_summary_EXP-20250512103253-J6DJL4VR.json
+2025-05-12 10:32:53,512 - deanon_toolkit - INFO - Generated 3 browser exploit variants
+2025-05-12 10:32:53,512 - deanon_toolkit - INFO - Running core de-anonymization techniques
+2025-05-12 10:32:53,515 - onion_deanon - INFO - Generated payload: output\run_20250512_103253\payloads\payload_SPPAQL8Y3C.html
+2025-05-12 10:32:53,517 - onion_deanon - INFO - Generated tracking file: output\run_20250512_103253\payloads\tracking_SPPAQL8Y3C.json
+2025-05-12 10:32:53,519 - onion_deanon - INFO - Initialized de-anonymizer for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 10:32:53,519 - onion_deanon - INFO - Running technique: circuit_fingerprinting
+2025-05-12 10:32:53,519 - onion_deanon - INFO - Simulating circuit fingerprinting technique
+2025-05-12 10:32:53,519 - onion_deanon - INFO - Running technique: traffic_correlation
+2025-05-12 10:32:53,519 - onion_deanon - INFO - Simulating traffic correlation technique
+2025-05-12 10:32:53,519 - onion_deanon - INFO - Running technique: hosting_detection
+2025-05-12 10:32:53,519 - onion_deanon - INFO - Simulating hosting detection technique
+2025-05-12 10:32:53,520 - onion_deanon - INFO - Running technique: service_exploitation
+2025-05-12 10:32:53,520 - onion_deanon - INFO - Simulating service exploitation technique
+2025-05-12 10:32:53,520 - onion_deanon - INFO - Running technique: historical_data
+2025-05-12 10:32:53,520 - onion_deanon - INFO - Simulating historical data analysis
+2025-05-12 10:32:53,522 - onion_deanon - INFO - All techniques completed. Results saved to: output\run_20250512_103253\reports\deanon_results_20250512_103253.json
+2025-05-12 10:32:53,523 - onion_deanon - INFO - Generating comprehensive de-anonymization report
+2025-05-12 10:32:53,523 - onion_deanon - INFO - Comprehensive report generated: output\run_20250512_103253\reports\deanon_report_20250512_103253.json
+2025-05-12 10:32:53,523 - onion_deanon - INFO - Initialized deployment tools for 34iwqw2sficqeksqelyyoo5cnulb622jofbimc5iuq73mjj3abn4vuyd.onion
+2025-05-12 10:32:53,525 - onion_deanon - INFO - Simulating payload deployment via iframe_injection
+2025-05-12 10:32:53,525 - onion_deanon - INFO - Payload deployment simulated: iframe_injection
+2025-05-12 10:32:53,525 - deanon_toolkit - INFO - Core de-anonymization techniques completed
+2025-05-12 10:32:53,527 - deanon_toolkit - INFO - Comprehensive analysis completed. Report saved to: output\run_20250512_103253\reports\comprehensive_report_20250512_103253.json

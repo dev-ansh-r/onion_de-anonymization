@@ -1,0 +1,23 @@
+{
+  "192.168.1.1": {
+    "correlation_score": 0.0,
+    "match_count": 0,
+    "best_match": null,
+    "is_actual_target": false,
+    "conclusion": false
+  },
+  "10.0.0.1": {
+    "correlation_score": 0.0,
+    "match_count": 0,
+    "best_match": null,
+    "is_actual_target": false,
+    "conclusion": false
+  },
+  "172.16.0.1": {
+    "correlation_score": 0.0,
+    "match_count": 0,
+    "best_match": null,
+    "is_actual_target": false,
+    "conclusion": false
+  }
+}

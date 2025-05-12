@@ -1,0 +1,59 @@
+{
+  "ip": "10.0.0.1",
+  "is_actual_target": false,
+  "capture_start": 1747026173.4321861,
+  "capture_end": 1747026221.7433891,
+  "packet_count": 91,
+  "traffic_data_sample": [
+    {
+      "timestamp": 1747026173.8882515,
+      "size": 1402,
+      "direction": "in"
+    },
+    {
+      "timestamp": 1747026174.7737672,
+      "size": 924,
+      "direction": "out"
+    },
+    {
+      "timestamp": 1747026175.614367,
+      "size": 1408,
+      "direction": "out"
+    },
+    {
+      "timestamp": 1747026175.9162848,
+      "size": 433,
+      "direction": "out"
+    },
+    {
+      "timestamp": 1747026176.2778974,
+      "size": 587,
+      "direction": "in"
+    },
+    {
+      "timestamp": 1747026177.0795372,
+      "size": 1666,
+      "direction": "out"
+    },
+    {
+      "timestamp": 1747026177.269844,
+      "size": 1230,
+      "direction": "in"
+    },
+    {
+      "timestamp": 1747026178.235322,
+      "size": 1772,
+      "direction": "out"
+    },
+    {
+      "timestamp": 1747026178.6372201,
+      "size": 625,
+      "direction": "in"
+    },
+    {
+      "timestamp": 1747026178.8315327,
+      "size": 250,
+      "direction": "out"
+    }
+  ]
+}

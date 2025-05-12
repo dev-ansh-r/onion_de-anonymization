@@ -1,0 +1,13 @@
+{
+  "exploit_id": "EXP-20250512103253-J6DJL4VR",
+  "creation_time": "2025-05-12T10:32:53.506257",
+  "techniques": {
+    "webrtc": true,
+    "dns": true,
+    "canvas": true,
+    "timing": true,
+    "history": true,
+    "plugins": true
+  },
+  "notes": "This is for educational purposes only"
+}

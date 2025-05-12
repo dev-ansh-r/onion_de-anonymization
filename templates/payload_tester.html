@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block title %}Payload Tester: {{ filename }}{% endblock %}
+
+{% block head_extra %}
+<style>
+    .payload-warning {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 10px;
+        text-align: center;
+        z-index: 9999;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .payload-frame {
+        border: 2px solid #dc3545;
+        border-radius: 5px;
+        margin-top: 20px;
+        width: 100%;
+        height: 600px;
+        background-color: #fff;
+    }
+    
+    .code-area {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="payload-warning">
+    ⚠️ TESTING MODE: This is a de-anonymization payload being tested in a controlled environment. ⚠️
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                <li class="breadcrumb-item active">Testing Payload: {{ filename }}</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-danger text-white">
+                <h3><i class="fas fa-flask"></i> Payload Tester</h3>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-warning">
+                    <strong>Warning:</strong> This payload is intended for educational purposes only. It demonstrates potential techniques 
+                    that could be used to de-anonymize users. Running this in a controlled environment is safe, but using
+                    such payloads in the real world without explicit permission is unethical and potentially illegal.
+                </div>
+                
+                <h4>Payload Code:</h4>
+                <div class="code-area">
+                    <pre><code class="language-{{ file_type }}">{{ content }}</code></pre>
+                </div>
+                
+                <h4 class="mt-4">Test Environment:</h4>
+                <p>The payload will be executed in the sandbox below:</p>
+                
+                {% if file_type == 'html' %}
+                    <!-- Use srcdoc attribute to safely embed HTML content -->
+                    <iframe class="payload-frame" sandbox="allow-scripts allow-same-origin" 
+                            id="html-frame" srcdoc="{{ content|e }}"></iframe>
+                {% elif file_type == 'js' %}
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            JavaScript Console Output
+                        </div>
+                        <div class="card-body">
+                            <pre id="js-console" class="bg-dark text-light p-3">// Console output will appear here</pre>
+                        </div>
+                    </div>
+                    <button class="btn btn-danger mt-3" id="run-js-btn">
+                        <i class="fas fa-play"></i> Run JavaScript
+                    </button>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
+
+{% if file_type == 'js' %}
+<script>
+    document.getElementById('run-js-btn').addEventListener('click', function() {
+        const jsConsole = document.getElementById('js-console');
+        jsConsole.innerHTML = '// Running JavaScript...\n';
+        
+        // Create a sandbox for the JavaScript
+        const sandbox = {
+            console: {
+                log: function(msg) {
+                    jsConsole.innerHTML += '> ' + String(msg) + '\n';
+                },
+                error: function(msg) {
+                    jsConsole.innerHTML += '> ERROR: ' + String(msg) + '\n';
+                },
+                warn: function(msg) {
+                    jsConsole.innerHTML += '> WARNING: ' + String(msg) + '\n';
+                }
+            },
+            alert: function(msg) {
+                jsConsole.innerHTML += '> ALERT: ' + String(msg) + '\n';
+            },
+            document: {
+                // Mock document object
+                write: function(content) {
+                    jsConsole.innerHTML += '> document.write() called with: ' + String(content) + '\n';
+                }
+            }
+        };
+        
+        try {
+            // Get the JavaScript content and execute it
+            const jsContent = {{ content|tojson }};
+            const safeExec = new Function('console', 'alert', 'document', jsContent);
+            safeExec(sandbox.console, sandbox.alert, sandbox.document);
+            jsConsole.innerHTML += '\n// JavaScript execution completed';
+        } catch (e) {
+            jsConsole.innerHTML += '\n// ERROR: ' + e.message;
+        }
+    });
+</script>
+{% endif %}
+{% endblock %} 

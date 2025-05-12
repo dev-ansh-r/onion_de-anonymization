@@ -1,0 +1,230 @@
+[
+  {
+    "timestamp": "2025-05-12T09:37:00.255280",
+    "exploit_id": "EXP-20250512101600-OJNBXYJF",
+    "source_ip": "127.0.0.1",
+    "browser_info": {
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0",
+      "language": "de",
+      "platform": "MacIntel",
+      "screenDimensions": "1920x1080",
+      "timezone": "Europe/London"
+    },
+    "techniques": {
+      "webrtc": {
+        "attempted": true,
+        "successful": false,
+        "real_ip": null
+      },
+      "dns": {
+        "attempted": true,
+        "successful": false
+      },
+      "canvas_fingerprint": {
+        "attempted": true,
+        "hash": "b73f7573ecdb238a7873e29e2e6eb320"
+      },
+      "timing_analysis": {
+        "attempted": true,
+        "measurements": [
+          426.0508960299566,
+          340.6748307254383,
+          177.7666670123861,
+          210.01815671957056,
+          111.58503367730445
+        ]
+      }
+    },
+    "notes": "This is simulated data for educational purposes"
+  },
+  {
+    "timestamp": "2025-05-12T09:18:00.255280",
+    "exploit_id": "EXP-20250512101600-OJNBXYJF",
+    "source_ip": "127.0.0.1",
+    "browser_info": {
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:91.0) Gecko/20100101 Firefox/91.0",
+      "language": "en-GB",
+      "platform": "MacIntel",
+      "screenDimensions": "1920x1080",
+      "timezone": "Europe/London"
+    },
+    "techniques": {
+      "webrtc": {
+        "attempted": true,
+        "successful": false,
+        "real_ip": null
+      },
+      "dns": {
+        "attempted": true,
+        "successful": false
+      },
+      "canvas_fingerprint": {
+        "attempted": true,
+        "hash": "072e804a7df0d3f39323f22aac480ee9"
+      },
+      "timing_analysis": {
+        "attempted": true,
+        "measurements": [
+          279.09766870930457,
+          407.7635307752325,
+          135.26902740158576,
+          418.93085905572383,
+          257.9913820176953
+        ]
+      }
+    },
+    "notes": "This is simulated data for educational purposes"
+  },
+  {
+    "timestamp": "2025-05-12T09:36:00.255280",
+    "exploit_id": "EXP-20250512101600-OJNBXYJF",
+    "source_ip": "127.0.0.1",
+    "browser_info": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0",
+      "language": "en-GB",
+      "platform": "Win32",
+      "screenDimensions": "1280x800",
+      "timezone": "Europe/London"
+    },
+    "techniques": {
+      "webrtc": {
+        "attempted": true,
+        "successful": false,
+        "real_ip": null
+      },
+      "dns": {
+        "attempted": true,
+        "successful": false
+      },
+      "canvas_fingerprint": {
+        "attempted": true,
+        "hash": "f73c99bb897d832ed0436736a4ce643d"
+      },
+      "timing_analysis": {
+        "attempted": true,
+        "measurements": [
+          310.2764322420376,
+          231.96261393225006,
+          327.79913863228614,
+          216.8293120087012,
+          358.7709651650975
+        ]
+      }
+    },
+    "notes": "This is simulated data for educational purposes"
+  },
+  {
+    "timestamp": "2025-05-12T10:11:00.255280",
+    "exploit_id": "EXP-20250512101600-OJNBXYJF",
+    "source_ip": "127.0.0.1",
+    "browser_info": {
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:91.0) Gecko/20100101 Firefox/91.0",
+      "language": "en-GB",
+      "platform": "Win32",
+      "screenDimensions": "2560x1440",
+      "timezone": "America/New_York"
+    },
+    "techniques": {
+      "webrtc": {
+        "attempted": true,
+        "successful": false,
+        "real_ip": null
+      },
+      "dns": {
+        "attempted": true,
+        "successful": false
+      },
+      "canvas_fingerprint": {
+        "attempted": true,
+        "hash": "f2433ed0c7ec3af419625939c7dce4bf"
+      },
+      "timing_analysis": {
+        "attempted": true,
+        "measurements": [
+          379.2780116910696,
+          277.5551446158173,
+          292.62721754738635,
+          119.67632045175209,
+          345.9339432586242
+        ]
+      }
+    },
+    "notes": "This is simulated data for educational purposes"
+  },
+  {
+    "timestamp": "2025-05-12T10:05:00.255280",
+    "exploit_id": "EXP-20250512101600-OJNBXYJF",
+    "source_ip": "127.0.0.1",
+    "browser_info": {
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:91.0) Gecko/20100101 Firefox/91.0",
+      "language": "en-GB",
+      "platform": "MacIntel",
+      "screenDimensions": "1280x800",
+      "timezone": "UTC"
+    },
+    "techniques": {
+      "webrtc": {
+        "attempted": true,
+        "successful": false,
+        "real_ip": null
+      },
+      "dns": {
+        "attempted": true,
+        "successful": false
+      },
+      "canvas_fingerprint": {
+        "attempted": true,
+        "hash": "fced90af1dee55597d9025b44b1b7409"
+      },
+      "timing_analysis": {
+        "attempted": true,
+        "measurements": [
+          241.4588677681791,
+          305.9242852115283,
+          351.67676069541125,
+          157.77591825742041,
+          122.95075273869118
+        ]
+      }
+    },
+    "notes": "This is simulated data for educational purposes"
+  },
+  {
+    "timestamp": "2025-05-12T09:22:00.255280",
+    "exploit_id": "EXP-20250512101600-OJNBXYJF",
+    "source_ip": "127.0.0.1",
+    "browser_info": {
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0",
+      "language": "de",
+      "platform": "MacIntel",
+      "screenDimensions": "1280x800",
+      "timezone": "Europe/London"
+    },
+    "techniques": {
+      "webrtc": {
+        "attempted": true,
+        "successful": false,
+        "real_ip": null
+      },
+      "dns": {
+        "attempted": true,
+        "successful": false
+      },
+      "canvas_fingerprint": {
+        "attempted": true,
+        "hash": "3a579d19166f69c1487ae6c541a476de"
+      },
+      "timing_analysis": {
+        "attempted": true,
+        "measurements": [
+          499.03114692418575,
+          350.1136085937531,
+          184.47421122688849,
+          445.2493151603123,
+          364.1997163191055
+        ]
+      }
+    },
+    "notes": "This is simulated data for educational purposes"
+  }
+]

@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block title %}HTML Viewer: {{ filename }}{% endblock %}
+
+{% block head_extra %}
+<link href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css" rel="stylesheet" />
+<style>
+    .content-area {
+        max-height: 600px;
+        overflow-y: auto;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        padding: 1rem;
+    }
+    
+    .html-preview {
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        padding: 1rem;
+        margin-top: 1rem;
+        background-color: #fff;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                <li class="breadcrumb-item active">HTML File: {{ filename }}</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h3><i class="fas fa-file-code"></i> {{ filename }}</h3>
+                <div>
+                    <button class="btn btn-outline-secondary" id="copy-btn">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                    <button class="btn btn-outline-primary" id="toggle-preview-btn">
+                        <i class="fas fa-eye"></i> Preview
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="content-area">
+                    <pre class="language-html"><code id="html-content">{{ content }}</code></pre>
+                </div>
+                
+                <div class="html-preview mt-3" id="preview-area" style="display: none;">
+                    <h4>HTML Preview</h4>
+                    <div class="alert alert-warning">
+                        <strong>Warning:</strong> This is a preview of potentially dangerous HTML. Viewing is safe but actual execution could pose security risks.
+                    </div>
+                    <div class="preview-content p-3 border" id="preview-content">
+                        <!-- Content will be injected here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/components/prism-markup.min.js"></script>
+<script>
+    document.getElementById('copy-btn').addEventListener('click', function() {
+        const content = document.getElementById('html-content');
+        const textarea = document.createElement('textarea');
+        textarea.value = content.textContent;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        
+        this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        setTimeout(() => {
+            this.innerHTML = '<i class="fas fa-copy"></i> Copy';
+        }, 2000);
+    });
+    
+    document.getElementById('toggle-preview-btn').addEventListener('click', function() {
+        const previewArea = document.getElementById('preview-area');
+        const previewContent = document.getElementById('preview-content');
+        const htmlContent = document.getElementById('html-content').textContent;
+        
+        if (previewArea.style.display === 'none') {
+            // Show preview
+            previewArea.style.display = 'block';
+            previewContent.innerHTML = htmlContent;
+            this.innerHTML = '<i class="fas fa-eye-slash"></i> Hide Preview';
+        } else {
+            // Hide preview
+            previewArea.style.display = 'none';
+            previewContent.innerHTML = '';
+            this.innerHTML = '<i class="fas fa-eye"></i> Preview';
+        }
+    });
+</script>
+{% endblock %} 
